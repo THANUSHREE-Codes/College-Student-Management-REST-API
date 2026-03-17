@@ -12,15 +12,6 @@ POST /students – Add a new student
 PUT /students/:id – Update a student
 DELETE /students/:id – Delete a student
 
-📄 Student Data Structure
-{
-[
-    { id: 1, name: "Rahul", email: "rahul@gmail.com", course: "CS", year: 2 },
-    { id: 2, name: "Priya", email: "priya@gmail.com", course: "IT", year: 3 },
-    { id: 3, name: "Amit", email: "amit@gmail.com", course: "EE", year: 4 }
-];
-}
-
 🔎 Query Features
 
 1️⃣ Pagination
