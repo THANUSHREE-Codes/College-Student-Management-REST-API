@@ -75,7 +75,7 @@ const server = http.createServer((req, res) => {
                     message: "All fields are required"
                 }));
             }
-
+            //error handling
             if (!emailRegex.test(student.email)) {
                 res.statusCode = 400;
                 return res.end(JSON.stringify({
