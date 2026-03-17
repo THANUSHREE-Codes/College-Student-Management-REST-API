@@ -12,7 +12,7 @@ const server = http.createServer((req, res) => {
 
     const url = new URL(req.url, `http://${req.headers.host}`);
 
-    // GET all students + pagination + filtering
+
     if (req.method === "GET" && url.pathname === "/students") {
 
         let result = students;
@@ -35,7 +35,7 @@ const server = http.createServer((req, res) => {
         res.end(JSON.stringify(result));
     }
 
-    // GET single student
+    // GET 
     else if(req.method === "GET" && req.url.startsWith("/students/")) {
 
         const id = parseInt(req.url.split("/")[2]);
@@ -52,7 +52,7 @@ const server = http.createServer((req, res) => {
         res.end(JSON.stringify(student));
     }
 
-    // POST create student
+    // POST 
     else if (req.method === "POST" && req.url === "/students") {
 
         let body = "";
@@ -103,7 +103,7 @@ const server = http.createServer((req, res) => {
         });
     }
 
-    // PUT update student
+    // PUT 
     else if(req.method==="PUT" && req.url.startsWith("/students/")){
 
         const id = parseInt(req.url.split("/")[2]);
@@ -139,7 +139,7 @@ const server = http.createServer((req, res) => {
         });
     }
 
-    // DELETE student
+    // DELETE 
     else if (req.method === "DELETE" && req.url.startsWith("/students/")) {
 
         const id = parseInt(req.url.split("/")[2]);
